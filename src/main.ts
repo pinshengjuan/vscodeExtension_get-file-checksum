@@ -1,25 +1,26 @@
 // import { writeFile } from "fs";
 import * as vscode from "vscode";
-import checkAlgorithm from "./checkAlgorithm";
+
+import NumToStrHelper from "./utils/numToStr";
+import calcChecksum from "./calcChecksum";
 import copyToClipboard from "./copyToClipboard";
-import changeToString from "./changeToString";
-import addPrefix from "./addPrefix";
 
 /**
  *
  * @param filePath
  */
 function main(filePath: string, type: string) {
-  const promise = checkAlgorithm(filePath, type);
+  /**
+   * calculate checksum
+   */
+  calcChecksum(filePath, type)
+    .then((checksum: number) => {
+      console.log(checksum);
 
-  promise
-    .then((resValue: number) => {
-      console.log(resValue);
+      /** convert checksum number to string */
+      const strChecksum = NumToStrHelper.convert(checksum);
 
-      const str = changeToString(resValue);
-      const strWithPrefix = addPrefix(str);
-
-      copyToClipboard(strWithPrefix).then(() => {
+      copyToClipboard(strChecksum).then(() => {
         // TODO: copy to clipboard successfully
         console.log("success");
       });
