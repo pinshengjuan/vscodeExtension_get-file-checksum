@@ -1,21 +1,24 @@
-import { rejects } from "assert";
 import * as vscode from "vscode";
 
-function addPrefix(result: string): Promise<any> {
-  return new Promise((resolve) => {
-    const config = vscode.workspace.getConfiguration("get-file-checksum");
-    const isPerfix = config["prefix"];
-    const base = config["base"];
+function addPrefix(value: string): string {
+  const config = vscode.workspace.getConfiguration("get-file-checksum");
+  const isPerfix: boolean | undefined = config["prefix"];
+  const base = config["base"];
 
-    if(base === "Hexadecimal")
-    {
-      if (isPerfix) {
-        result = "0x" + result;
-      }
-    }
+  if (!isPerfix) {
+    return value;
+  }
 
-    resolve(result);
-  });
+  switch (base) {
+    /** hex */
+    case "Hexadecimal":
+      return "0x" + value;
+    /** TODO: octet */
+    /** TODO: binary */
+    /** defualt: decimal */
+    default:
+      return value;
+  }
 }
 
 export default addPrefix;
