@@ -14,7 +14,7 @@
 		"url": "https://github.com/pinshengjuan/get-file-checksum"
 	},
   "activationEvents": [
-    "*"
+    "workspaceContains:*"
   ],
   "main": "./out/extension.js",
   "contributes": {
