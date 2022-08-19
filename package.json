@@ -11,6 +11,9 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "checksum"
+  ],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/pinshengjuan/get-file-checksum"
