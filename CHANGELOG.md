@@ -5,6 +5,9 @@ All notable changes to the "get-file-checksum" extension will be documented in t
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
 ## [0.0.2]
+- Change icon
+
+## [0.0.2]
 - Restructured code
 
 ## [0.0.1]
