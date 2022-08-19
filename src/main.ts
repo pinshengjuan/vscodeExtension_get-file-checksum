@@ -1,28 +1,23 @@
-import { writeFile } from "fs";
-import * as vscode from "vscode";
 import checkAlgorithm from "./checkAlgorithm";
 import copyToClipboard from "./copyToClipboard";
-import changeToString from "./changeToString";
-import addPrefix from "./addPrefix";
+import strProcess from "./utils/strProcess";
+import readContent from "./readContent";
+
 /**
  *
  * @param filePath
+ * @param type
  */
 function main(filePath: string, type: string) {
-  checkAlgorithm(filePath, type)
-    .then((algorithmRet) => {
-      algorithmRet(filePath, type).then((resValue: number) => {
-        console.log(resValue);
-        changeToString(resValue).then((resultStr) => {
-          addPrefix(resultStr).then((resultPrefixStr) => {
-            copyToClipboard(resultPrefixStr);
-          });
-        });
-      });
-    })
-    .catch((fail) => {
-      console.log(fail);
+  readContent(filePath).then((contents) => {
+    let algorithmRet: any | undefined = checkAlgorithm(type);
+
+    const checksumNum = algorithmRet(contents, type);
+    const checksumStr: string = strProcess(checksumNum);
+    copyToClipboard(checksumStr).then(() => {
+      console.log("All done");
     });
+  });
 }
 
 export default main;
