@@ -4,7 +4,12 @@ All notable changes to the "get-file-checksum" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [0.0.2]
+## [1.0.0]
+- Change icon background
+- add notification on single file checksum
+- multiple file checksum supported
+
+## [0.0.3]
 - Change icon
 
 ## [0.0.2]
