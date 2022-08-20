@@ -35,6 +35,11 @@
 					"type": "boolean",
 					"default": true,
 					"description": "Set to add \"0x\" prefix, the option only take effects on Hexadecimal"
+				},
+				"get-file-checksum.checksumCopiedNotification": {
+					"type": "boolean",
+					"default": true,
+					"description": "Set to show a notification about file checksum copied."
 				}
 			}
 		},
