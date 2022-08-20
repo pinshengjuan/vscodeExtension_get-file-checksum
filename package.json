@@ -2,7 +2,7 @@
   "name": "get-file-checksum",
   "displayName": "Get File Checksum",
   "description": "",
-  "icon": "img/icon.png",
+  "icon": "img/icon/Checksum.png",
   "version": "0.0.3",
 	"publisher": "pinshengjuan",
   "engines": {
