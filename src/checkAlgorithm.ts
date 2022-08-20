@@ -1,5 +1,10 @@
 import calcChecksum from "./Algorithm/calcChecksum";
 
+/**
+ *
+ * @param type
+ * @returns
+ */
 function checkAlgorithm(type: string) {
   let func: any | undefined;
 

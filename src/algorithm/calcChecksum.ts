@@ -1,8 +1,8 @@
 /**
- * 
- * @param contents 
- * @param type 
- * @returns 
+ *
+ * @param contents
+ * @param type
+ * @returns
  */
 function calcChecksum(contents: string, type: string) {
   let i = 0;

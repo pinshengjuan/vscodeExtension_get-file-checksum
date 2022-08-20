@@ -1,5 +1,8 @@
 import * as vscode from "vscode";
 
+/**
+ *
+ */
 function showInfo() {
   const vscConfig = vscode.workspace.getConfiguration("get-file-checksum");
   if (vscConfig["checksumCopiedNotification"]) {
