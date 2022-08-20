@@ -1,6 +1,14 @@
-# get-file-checksum README
+# get-file-checksum
 
-Under EXPLORER right click on the file and select "Get File Checksum", the value will copy on clipboard.
+## For single file:
+* Under EXPLORER right click on the file
+* Select one algorithm on "Get File Checksum"
+* The file checksum value will copy on clipboard.
+
+## For multiple files:
+* Under EXPLORER select multiple files
+* Right click on the one file and select one algorithm on "Get File Checksum"
+* A file will popup on editor for all selected file's checksum.
 
 ### Supported algorithm:
 - checksum-8
