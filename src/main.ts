@@ -1,25 +1,31 @@
-import * as vscode from 'vscode';
-import checkAlgorithm from "./checkAlgorithm";
 import copyToClipboard from "./copyToClipboard";
-import strProcess from "./utils/strProcess";
-import readContent from "./readContent";
+import StrProcess from "./utils/strProcess";
 import showInfo from "./showInfo";
+import openEditor from "./openEditor";
+import doForloop from "./doForloop";
+import writeToFile from "./writeToFile";
+import formatContent from "./formatContent";
 
 /**
  *
- * @param filePath
+ * @param allSelectedFile
  * @param type
  */
-function main(filePath: string, type: string) {
-  readContent(filePath).then((contents) => {
-    let algorithmRet: any | undefined = checkAlgorithm(type);
+async function main(allSelectedFile: any, type: string) {
+  const fileCount = allSelectedFile.length;
 
-    const checksumNum = algorithmRet(contents, type);
-    const checksumStr: string = strProcess(checksumNum);
-    copyToClipboard(checksumStr).then(() => {
-      showInfo();
-      console.log("All done");
-    });
+  doForloop(allSelectedFile, type).then((checksumStr) => {
+    if (fileCount === 1) {
+      copyToClipboard(checksumStr[0]).then(() => {
+        showInfo();
+        console.log("All done");
+      });
+    } else {
+      const maxLen: number = StrProcess.strFindMaxLen(allSelectedFile);
+      const content = formatContent(allSelectedFile, checksumStr, maxLen);
+      const batchFilePath: string = writeToFile(content);
+      openEditor(batchFilePath);
+    }
   });
 }
 
