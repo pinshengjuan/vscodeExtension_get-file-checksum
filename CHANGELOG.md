@@ -4,8 +4,11 @@ All notable changes to the "get-file-checksum" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.1.1]
+- Add keywords
+
 ## [1.1.0]
-- Support SHA-1/SHA-256/SHA-384/SHA-512/MD-5
+- Support SHA-1/SHA-256/SHA-384/SHA-512/MD-5 by using [node-forge](https://www.npmjs.com/package/node-forge)
 
 ## [1.0.0]
 - Change icon background
