@@ -1,4 +1,4 @@
-import calcChecksum from "./Algorithm/calcChecksum";
+import calcChecksum from "./algorithm/calcChecksum";
 
 /**
  *

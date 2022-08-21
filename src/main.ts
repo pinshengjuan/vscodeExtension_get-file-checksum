@@ -2,7 +2,7 @@ import copyToClipboard from "./copyToClipboard";
 import StrProcess from "./utils/strProcess";
 import showInfo from "./showInfo";
 import openEditor from "./openEditor";
-import doForloop from "./doForloop";
+import loopToParseFile from "./doForloop";
 import writeToFile from "./writeToFile";
 import formatContent from "./formatContent";
 
@@ -14,7 +14,7 @@ import formatContent from "./formatContent";
 async function main(allSelectedFile: any, type: string) {
   const fileCount = allSelectedFile.length;
 
-  doForloop(allSelectedFile, type).then((checksumStr) => {
+  loopToParseFile(allSelectedFile, type).then((checksumStr) => {
     if (fileCount === 1) {
       copyToClipboard(checksumStr[0]).then(() => {
         showInfo();

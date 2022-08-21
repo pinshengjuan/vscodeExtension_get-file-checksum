@@ -8,7 +8,7 @@ import StrProcess from "./utils/strProcess";
  * @param type
  * @returns
  */
-function doForloop(allSelectedFile: any, type: string): Promise<any> {
+function loopToParseFile(allSelectedFile: any, type: string): Promise<any> {
   return new Promise(async (resolve) => {
     let fileCount: number = 0;
     const files: string[] = [];
@@ -19,10 +19,10 @@ function doForloop(allSelectedFile: any, type: string): Promise<any> {
       let algorithmRet: any | undefined = checkAlgorithm(type);
 
       const checksumNum: number = algorithmRet(contents, type);
-      checksumStr.push(StrProcess.strStr(checksumNum));
+      checksumStr.push(StrProcess.overallStr(checksumNum));
     }
     resolve(checksumStr);
   });
 }
 
-export default doForloop;
+export default loopToParseFile;

@@ -7,7 +7,7 @@ type Configuration = {
 };
 
 class StrProcess {
-  public strStr(content: number) {
+  public overallStr(content: number) {
     const vscConfig = vscode.workspace.getConfiguration("get-file-checksum");
     const baseInNum: number = vscConfig["base"] === "Decimal" ? 10 : 16;
     const perfix: boolean = baseInNum === 10 ? false : vscConfig["prefix"];

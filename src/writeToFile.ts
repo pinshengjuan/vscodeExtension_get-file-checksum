@@ -7,7 +7,7 @@ import * as path from "path";
  * @returns
  */
 function writeToFile(content: string) {
-  let batchFilePath = path.join(__dirname, ".batchgetchecksum.txt");
+  let batchFilePath = path.join(__dirname, "batchChecksum.text");
 
   fs.writeFileSync(batchFilePath, content);
 
