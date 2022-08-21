@@ -12,7 +12,15 @@
     "Other"
   ],
   "keywords": [
-    "checksum"
+    "checksum",
+    "SHA1",
+    "SHA-1",
+    "SHA256",
+    "SHA-256",
+    "MD5",
+    "MD-5",
+    "HASH",
+    "雜湊"
   ],
   "repository": {
     "type": "git",
