@@ -4,6 +4,9 @@ All notable changes to the "get-file-checksum" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.1.0]
+- Support SHA-1/SHA-256/SHA-384/SHA-512/MD-5
+
 ## [1.0.0]
 - Change icon background
 - add notification on single file checksum
@@ -16,5 +19,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Restructured code
 
 ## [0.0.1]
-
 - Initial release

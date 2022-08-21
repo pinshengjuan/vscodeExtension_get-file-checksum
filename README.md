@@ -11,12 +11,18 @@
 * A file will popup on editor for all selected file's checksum.
 
 ### Supported algorithm:
-- checksum-8
-- checksum-16
-- checksum-32
+- Checksum-8
+- Checksum-16
+- Checksum-32
+- SHA-1
+- SHA-256
+- SHA-384
+- SHA-512
+- MD-5
 
 ### Under development:
-- MD-5
+- CRC-16
+- CRC-32
 
 ### Reference
 - All algorithm names refer to [HXD](https://mh-nexus.de/en/hxd/)
