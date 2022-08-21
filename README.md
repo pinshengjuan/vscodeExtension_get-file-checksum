@@ -17,3 +17,6 @@
 
 ### Under development:
 - MD-5
+
+### Reference
+- All algorithm names refer to [HXD](https://mh-nexus.de/en/hxd/)

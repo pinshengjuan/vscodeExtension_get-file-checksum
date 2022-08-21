@@ -71,17 +71,17 @@
       {
         "command": "get-file-checksum.getFileChecksum8",
         "when": "!explorerResourceIsFolder",
-        "title": "Checksum 8"
+        "title": "Checksum-8"
       },
       {
         "command": "get-file-checksum.getFileChecksum16",
         "when": "!explorerResourceIsFolder",
-        "title": "Checksum 16"
+        "title": "Checksum-16"
       },
       {
         "command": "get-file-checksum.getFileChecksum32",
         "when": "!explorerResourceIsFolder",
-        "title": "Checksum 32"
+        "title": "Checksum-32"
       }
     ],
     "submenus": [
