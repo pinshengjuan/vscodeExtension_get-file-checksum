@@ -1,4 +1,6 @@
 import calcChecksum from "./algorithm/calcChecksum";
+import calcSha from "./algorithm/calcSha";
+import calcMd5 from "./algorithm/calcMd5";
 
 /**
  *
@@ -16,9 +18,16 @@ function checkAlgorithm(type: string) {
       break;
     case "CRC-16":
     case "CRC-32":
-    case "SHA-1":
-    case "MD-5":
       console.log("these features are under development");
+      break;
+    case "SHA-1":
+    case "SHA-256":
+    case "SHA-384":
+    case "SHA-512":
+      func = calcSha;
+      break;
+    case "MD-5":
+      func = calcMd5;
       break;
     default:
       console.log(`Out of type ${type}`);

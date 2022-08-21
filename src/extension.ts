@@ -30,6 +30,46 @@ export function activate(context: vscode.ExtensionContext) {
       }
     )
   );
+  context.subscriptions.push(
+    vscode.commands.registerCommand(
+      "get-file-checksum.getFileChecksumSha1",
+      (uri: vscode.Uri, selectedFiles: any) => {
+        main(selectedFiles, "SHA-1"); //This is the entry point of the whole project
+      }
+    )
+  );
+  context.subscriptions.push(
+    vscode.commands.registerCommand(
+      "get-file-checksum.getFileChecksumSha256",
+      (uri: vscode.Uri, selectedFiles: any) => {
+        main(selectedFiles, "SHA-256"); //This is the entry point of the whole project
+      }
+    )
+  );
+  context.subscriptions.push(
+    vscode.commands.registerCommand(
+      "get-file-checksum.getFileChecksumSha384",
+      (uri: vscode.Uri, selectedFiles: any) => {
+        main(selectedFiles, "SHA-384"); //This is the entry point of the whole project
+      }
+    )
+  );
+  context.subscriptions.push(
+    vscode.commands.registerCommand(
+      "get-file-checksum.getFileChecksumSha512",
+      (uri: vscode.Uri, selectedFiles: any) => {
+        main(selectedFiles, "SHA-512"); //This is the entry point of the whole project
+      }
+    )
+  );
+  context.subscriptions.push(
+    vscode.commands.registerCommand(
+      "get-file-checksum.getFileChecksumMd5",
+      (uri: vscode.Uri, selectedFiles: any) => {
+        main(selectedFiles, "MD-5"); //This is the entry point of the whole project
+      }
+    )
+  );
 }
 
 // this method is called when your extension is deactivated

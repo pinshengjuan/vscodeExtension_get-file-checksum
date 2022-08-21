@@ -4,7 +4,7 @@
   "description": "",
   "icon": "img/icon/Checksum.png",
   "version": "1.0.0",
-	"publisher": "pinshengjuan",
+  "publisher": "pinshengjuan",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -14,35 +14,38 @@
   "keywords": [
     "checksum"
   ],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/pinshengjuan/get-file-checksum"
-	},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pinshengjuan/get-file-checksum"
+  },
   "activationEvents": [
     "workspaceContains:*"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "configuration": {
-			"title": "Get File Checksum",
-			"properties": {
+      "title": "Get File Checksum",
+      "properties": {
         "get-file-checksum.base": {
           "type": "string",
           "default": "Hexadecimal",
-          "enum": ["Decimal", "Hexadecimal"]
+          "enum": [
+            "Decimal",
+            "Hexadecimal"
+          ]
         },
-				"get-file-checksum.prefix": {
-					"type": "boolean",
-					"default": true,
-					"description": "Set to add \"0x\" prefix, the option only take effects on Hexadecimal"
-				},
-				"get-file-checksum.checksumCopiedNotification": {
-					"type": "boolean",
-					"default": true,
-					"description": "Set to show a notification about file checksum copied."
-				}
-			}
-		},
+        "get-file-checksum.prefix": {
+          "type": "boolean",
+          "default": true,
+          "description": "Set to add \"0x\" prefix, the option only take effects on Hexadecimal"
+        },
+        "get-file-checksum.checksumCopiedNotification": {
+          "type": "boolean",
+          "default": true,
+          "description": "Set to show a notification about file checksum copied."
+        }
+      }
+    },
     "menus": {
       "explorer/context": [
         {
@@ -53,17 +56,42 @@
         {
           "command": "get-file-checksum.getFileChecksum8",
           "when": "!explorerResourceIsFolder",
-          "group": "myGroup@1"
+          "group": "1checksum0@1"
         },
         {
           "command": "get-file-checksum.getFileChecksum16",
           "when": "!explorerResourceIsFolder",
-          "group": "myGroup@2"
+          "group": "1checksum0@2"
         },
         {
           "command": "get-file-checksum.getFileChecksum32",
           "when": "!explorerResourceIsFolder",
-          "group": "myGroup@3"
+          "group": "1checksum0@3"
+        },
+        {
+          "command": "get-file-checksum.getFileChecksumSha1",
+          "when": "!explorerResourceIsFolder",
+          "group": "2sha@1"
+        },
+        {
+          "command": "get-file-checksum.getFileChecksumSha256",
+          "when": "!explorerResourceIsFolder",
+          "group": "2sha@2"
+        },
+        {
+          "command": "get-file-checksum.getFileChecksumSha384",
+          "when": "!explorerResourceIsFolder",
+          "group": "2sha@3"
+        },
+        {
+          "command": "get-file-checksum.getFileChecksumSha512",
+          "when": "!explorerResourceIsFolder",
+          "group": "2sha@4"
+        },
+        {
+          "command": "get-file-checksum.getFileChecksumMd5",
+          "when": "!explorerResourceIsFolder",
+          "group": "3md5@1"
         }
       ]
     },
@@ -82,6 +110,31 @@
         "command": "get-file-checksum.getFileChecksum32",
         "when": "!explorerResourceIsFolder",
         "title": "Checksum-32"
+      },
+      {
+        "command": "get-file-checksum.getFileChecksumSha1",
+        "when": "!explorerResourceIsFolder",
+        "title": "SHA-1"
+      },
+      {
+        "command": "get-file-checksum.getFileChecksumSha256",
+        "when": "!explorerResourceIsFolder",
+        "title": "SHA-256"
+      },
+      {
+        "command": "get-file-checksum.getFileChecksumSha384",
+        "when": "!explorerResourceIsFolder",
+        "title": "SHA-384"
+      },
+      {
+        "command": "get-file-checksum.getFileChecksumSha512",
+        "when": "!explorerResourceIsFolder",
+        "title": "SHA-512"
+      },
+      {
+        "command": "get-file-checksum.getFileChecksumMd5",
+        "when": "!explorerResourceIsFolder",
+        "title": "MD-5"
       }
     ],
     "submenus": [
@@ -112,5 +165,7 @@
     "mocha": "^10.0.0",
     "typescript": "^4.7.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node-forge": "^1.3.1"
+  }
 }
