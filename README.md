@@ -4,11 +4,13 @@
 * Under EXPLORER right click on the file
 * Select one algorithm on "Get File Checksum"
 * The file checksum value will copy on clipboard.
+![](img/gif/single.gif)
 
 ## For multiple files:
 * Under EXPLORER select multiple files
 * Right click on the one file and select one algorithm on "Get File Checksum"
 * A file will popup on editor for all selected file's checksum.
+![](img/gif/multi.gif)
 
 ### Supported algorithm:
 - Checksum-8
