@@ -1,10 +1,10 @@
-import copyToClipboard from "./copyToClipboard";
-import StrProcess from "./utils/strProcess";
-import showInfo from "./showInfo";
-import openEditor from "./openEditor";
 import loopToParseFile from "./doForloop";
-import writeToFile from "./writeToFile";
-import formatContent from "./formatContent";
+import StrProcess from "./utils/strProcess";
+import copyToClipboard from "./singleFile/copyToClipboard";
+import showInfo from "./singleFile/showInfo";
+import openEditor from "./multiFile/openEditor";
+import writeToFile from "./multiFile/writeToFile";
+import formatContent from "./multiFile/formatContent";
 
 /**
  *
