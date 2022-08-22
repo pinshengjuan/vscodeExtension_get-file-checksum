@@ -11,9 +11,9 @@ function checkAlgorithm(type: string) {
   let func: any | undefined;
 
   switch (type) {
-    case "8":
-    case "16":
-    case "32":
+    case "Checksum-8":
+    case "Checksum-16":
+    case "Checksum-32":
       func = calcChecksum;
       break;
     case "CRC-16":

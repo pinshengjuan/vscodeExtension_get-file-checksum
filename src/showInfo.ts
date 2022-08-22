@@ -3,11 +3,11 @@ import * as vscode from "vscode";
 /**
  *
  */
-function showInfo() {
+function showInfo(type: string) {
   const vscConfig = vscode.workspace.getConfiguration("get-file-checksum");
   if (vscConfig["checksumCopiedNotification"]) {
     vscode.window.showInformationMessage(
-      "The checksum value for a single file has been copied to the clipboard!"
+      `"${type}" result for a single file has been copied to the clipboard!`
     );
   }
 }

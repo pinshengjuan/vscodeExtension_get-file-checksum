@@ -10,7 +10,7 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand(
       "get-file-checksum.getFileChecksum8",
       (uri: vscode.Uri, selectedFiles: any) => {
-        main(selectedFiles, "8"); //This is the entry point of the whole project
+        main(selectedFiles, "Checksum-8"); //This is the entry point of the whole project
       }
     )
   );
@@ -18,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand(
       "get-file-checksum.getFileChecksum16",
       (uri: vscode.Uri, selectedFiles: any) => {
-        main(selectedFiles, "16"); //This is the entry point of the whole project
+        main(selectedFiles, "Checksum-16"); //This is the entry point of the whole project
       }
     )
   );
@@ -26,7 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand(
       "get-file-checksum.getFileChecksum32",
       (uri: vscode.Uri, selectedFiles: any) => {
-        main(selectedFiles, "32"); //This is the entry point of the whole project
+        main(selectedFiles, "Checksum-32"); //This is the entry point of the whole project
       }
     )
   );

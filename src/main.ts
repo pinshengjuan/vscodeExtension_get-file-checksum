@@ -17,12 +17,12 @@ async function main(allSelectedFile: any, type: string) {
   loopToParseFile(allSelectedFile, type).then((checksumStr) => {
     if (fileCount === 1) {
       copyToClipboard(checksumStr[0]).then(() => {
-        showInfo();
+        showInfo(type);
         console.log("All done");
       });
     } else {
       const maxLen: number = StrProcess.strFindMaxLen(allSelectedFile);
-      const content = formatContent(allSelectedFile, checksumStr, maxLen);
+      const content = formatContent(allSelectedFile, checksumStr, maxLen, type);
       const batchFilePath: string = writeToFile(content);
       openEditor(batchFilePath);
     }

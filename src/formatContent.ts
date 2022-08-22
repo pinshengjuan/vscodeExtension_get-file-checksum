@@ -7,8 +7,8 @@ import * as path from "path";
  * @param maxLen
  * @returns
  */
-function formatContent(file: any, checksum: string[], maxLen: number) {
-  let content: string = "";
+function formatContent(file: any, checksum: string[], maxLen: number, type: string) {
+  let content: string = type + " result:\n\n";
   let fileCount: number = 0;
   let fillCount: number = 0;
   let blank: string = "";

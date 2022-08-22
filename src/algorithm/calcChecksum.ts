@@ -13,13 +13,13 @@ function calcChecksum(contents: string, type: string) {
   }
 
   switch (type) {
-    case "8":
+    case "Checksum-8":
       u32Buffer[0] = result & 0xff;
       break;
-    case "16":
+    case "Checksum-16":
       u32Buffer[0] = result & 0xffff;
       break;
-    case "32":
+    case "Checksum-32":
       u32Buffer[0] = result & 0xfffffffff;
       break;
   }
