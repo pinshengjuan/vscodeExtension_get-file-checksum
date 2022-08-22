@@ -4,6 +4,10 @@ All notable changes to the "get-file-checksum" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.1.2]
+- Add GIF on Readme
+- Add algorithm type on result
+
 ## [1.1.1]
 - Add keywords
 
