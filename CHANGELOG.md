@@ -4,6 +4,10 @@ All notable changes to the "get-file-checksum" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.3.0]
+
+- Add keybinding support under Editor Text Focus.
+
 ## [1.2.1]
 
 - Add keybinding instruction on Readme

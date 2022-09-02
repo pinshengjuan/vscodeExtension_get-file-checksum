@@ -16,11 +16,13 @@
 
 ## For keybinding:
 
-- Keybinding support both single file and multiple files
-- First go to settings.json to choose default algorithm for keybinding use
-- Change keyboard shortcut if needed(default: ctrl(cmd) + alt + a)
-  ![](img/gif/keybinding_single.gif)
-  ![](img/gif/keybinding_multi.gif)
+- First go to settings.json to choose default algorithm for keybinding use.
+- Change keyboard shortcut if needed(default: ctrl(cmd) + alt + a).
+- Keybinding support both single file and multiple files under EXPLORER
+  ![](img/gif/keybinding_exp_single.gif)
+  ![](img/gif/keybinding_exp_multi.gif)
+- Keybinding supports under Editor Text Focus
+  ![](img/gif/keybinding_editor.gif)
 
 ### Supported algorithm:
 
