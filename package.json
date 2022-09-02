@@ -37,7 +37,7 @@
         "command": "get-file-checksum.keybinding",
         "key": "ctrl+alt+a",
         "mac": "cmd+alt+a",
-        "when": "filesExplorerFocus"
+        "when": "filesExplorerFocus || editorTextFocus"
       }
     ],
     "configuration": {
@@ -129,7 +129,7 @@
     "commands": [
       {
         "command": "get-file-checksum.keybinding",
-        "when": "filesExplorerFocus",
+        "when": "filesExplorerFocus || editorTextFocus",
         "title": "Get file checksum keybinding"
       },
       {
