@@ -27,10 +27,19 @@
     "url": "https://github.com/pinshengjuan/get-file-checksum"
   },
   "activationEvents": [
+    "onCommand:get-file-checksum.keybinding",
     "workspaceContains:*"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "keybindings": [
+      {
+        "command": "get-file-checksum.keybinding",
+        "key": "ctrl+alt+a",
+        "mac": "cmd+alt+a",
+        "when": "filesExplorerFocus"
+      }
+    ],
     "configuration": {
       "title": "Get File Checksum",
       "properties": {
@@ -40,6 +49,20 @@
           "enum": [
             "Decimal",
             "Hexadecimal"
+          ]
+        },
+        "get-file-checksum.whichAlgorithmForKeybinding": {
+          "type": "string",
+          "default": "SHA-256",
+          "enum": [
+            "Checksum-8",
+            "Checksum-16",
+            "Checksum-32",
+            "SHA-1",
+            "SHA-256",
+            "SHA-384",
+            "SHA-512",
+            "MD-5"
           ]
         },
         "get-file-checksum.prefix": {
@@ -104,6 +127,11 @@
       ]
     },
     "commands": [
+      {
+        "command": "get-file-checksum.keybinding",
+        "when": "filesExplorerFocus",
+        "title": "Get file checksum keybinding"
+      },
       {
         "command": "get-file-checksum.getFileChecksum8",
         "when": "!explorerResourceIsFolder",

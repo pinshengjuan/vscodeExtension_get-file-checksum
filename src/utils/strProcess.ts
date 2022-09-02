@@ -18,12 +18,12 @@ class StrProcess {
     return strPrepended;
   }
 
-  public strFindMaxLen(fileName: any) {
+  public strFindMaxLen(files: string[]) {
     let fileCount = 0;
     let max: number = 0;
 
-    for (fileCount = 0; fileCount < fileName.length; fileCount++) {
-      const currentFileLen = path.basename(fileName[fileCount].fsPath).length;
+    for (fileCount = 0; fileCount < files.length; fileCount++) {
+      const currentFileLen = path.basename(files[fileCount]).length;
       max = max < currentFileLen ? currentFileLen : max;
     }
     return max;

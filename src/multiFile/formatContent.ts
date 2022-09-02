@@ -7,14 +7,19 @@ import * as path from "path";
  * @param maxLen
  * @returns
  */
-function formatContent(file: any, checksum: string[], maxLen: number, type: string) {
+function formatContent(
+  files: string[],
+  checksum: string[],
+  maxLen: number,
+  type: string
+) {
   let content: string = type + " result:\n\n";
   let fileCount: number = 0;
   let fillCount: number = 0;
   let blank: string = "";
 
-  for (fileCount = 0; fileCount < file.length; fileCount++) {
-    const fileName: string = path.basename(file[fileCount].fsPath);
+  for (fileCount = 0; fileCount < files.length; fileCount++) {
+    const fileName: string = path.basename(files[fileCount]);
     const fill: number = maxLen - fileName.length;
     blank = "";
     for (fillCount = 0; fillCount < fill; fillCount++) {
