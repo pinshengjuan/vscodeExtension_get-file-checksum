@@ -3,7 +3,7 @@
   "displayName": "Get File Checksum",
   "description": "",
   "icon": "img/icon/Checksum.png",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publisher": "pinshengjuan",
   "engines": {
     "vscode": "^1.70.0"

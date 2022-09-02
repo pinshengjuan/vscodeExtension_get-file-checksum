@@ -4,6 +4,10 @@ All notable changes to the "get-file-checksum" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.2.1]
+
+- Add keybinding instruction on Readme
+
 ## [1.2.0]
 
 - Add Keybinding
