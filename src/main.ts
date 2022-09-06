@@ -17,7 +17,7 @@ async function main(files: string[], type: string) {
   loopToParseFile(files, type).then((checksumStr) => {
     if (fileCount === 1) {
       copyToClipboard(checksumStr[0]).then(() => {
-        showInfo(type);
+        showInfo(files, type);
         console.log("All done");
       });
     } else {
