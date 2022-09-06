@@ -2,7 +2,7 @@ import * as path from "path";
 
 /**
  *
- * @param file
+ * @param files
  * @param checksum
  * @param maxLen
  * @returns
@@ -12,7 +12,7 @@ function formatContent(
   checksum: string[],
   maxLen: number,
   type: string
-) {
+): string {
   let content: string = type + " result:\n\n";
   let fileCount: number = 0;
   let fillCount: number = 0;
