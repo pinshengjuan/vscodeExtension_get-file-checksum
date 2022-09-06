@@ -16,11 +16,13 @@ async function main(files: string[], type: string) {
 
   loopToParseFile(files, type).then((checksumStr) => {
     if (fileCount === 1) {
+      //Here we only got one file, copy result to clipboard directly
       copyToClipboard(checksumStr[0]).then(() => {
         showInfo(files, type);
         console.log("All done");
       });
     } else {
+      //Here we got multiple files, show results on editor
       const maxLen: number = StrProcess.strFindMaxLen(files);
       const content: string = formatContent(files, checksumStr, maxLen, type);
       const batchFilePath: string = writeToFile(content);
