@@ -10,10 +10,11 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.commands.registerCommand(
       "get-file-checksum.keybinding",
-      async (fileObj) => {
-        GetFiles.keybinding(fileObj).then((fileStr) => {
-          const config = vscode.workspace.getConfiguration("get-file-checksum");
-          const algorithm = config["whichAlgorithmForKeybinding"];
+      async () => {
+        GetFiles.keybinding().then((fileStr: string[]) => {
+          const config: vscode.WorkspaceConfiguration =
+            vscode.workspace.getConfiguration("get-file-checksum");
+          const algorithm: any = config["whichAlgorithmForKeybinding"];
           main(fileStr, algorithm); //This is the entry point of the whole project
         });
       }

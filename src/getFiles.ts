@@ -16,14 +16,18 @@ class GetFiles {
     });
   }
 
-  public keybinding(fileObj: any): Promise<any> {
+  public keybinding(): Promise<any> {
     return new Promise(async (resolve) => {
+      /**
+       * Use copy file path then read clipboard to get selected files
+       */
       await vscode.commands.executeCommand("copyFilePath");
-      fileObj = await vscode.env.clipboard.readText(); // returns a string
-
-      // see note below for parsing multiple files/folders
-      const newUri = vscode.Uri.file(fileObj); // make it a Uri
-      resolve(newUri.path.replace(RegExp(/^\//), "").split(RegExp(/\r\n/)));
+      const fileStr: string = await vscode.env.clipboard.readText();
+      const uri: vscode.Uri = vscode.Uri.file(fileStr); // make it a Uri
+      const filesStrArr: string[] = uri.path
+        .replace(RegExp(/^\//), "") //remove the foremost "/"
+        .split(RegExp(/\r\n/)); //separate string to array by "\r\n"
+      resolve(filesStrArr);
     });
   }
 }
