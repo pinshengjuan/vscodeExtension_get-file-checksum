@@ -7,8 +7,9 @@ type Configuration = {
 };
 
 class StrProcess {
-  public overallStr(content: number) {
-    const vscConfig = vscode.workspace.getConfiguration("get-file-checksum");
+  public overallStr(content: number): string {
+    const vscConfig: vscode.WorkspaceConfiguration =
+      vscode.workspace.getConfiguration("get-file-checksum");
     const baseInNum: number = vscConfig["base"] === "Decimal" ? 10 : 16;
     const perfix: boolean = baseInNum === 10 ? false : vscConfig["prefix"];
     const config: Configuration = { base: baseInNum, isPrefix: perfix };
@@ -18,22 +19,22 @@ class StrProcess {
     return strPrepended;
   }
 
-  public strFindMaxLen(files: string[]) {
-    let fileCount = 0;
+  public strFindMaxLen(files: string[]): number {
+    let fileCount: number = 0;
     let max: number = 0;
 
     for (fileCount = 0; fileCount < files.length; fileCount++) {
-      const currentFileLen = path.basename(files[fileCount]).length;
+      const currentFileLen: number = path.basename(files[fileCount]).length;
       max = max < currentFileLen ? currentFileLen : max;
     }
     return max;
   }
 
-  private numToStr(base: number, content: number) {
+  private numToStr(base: number, content: number): string {
     return content.toString(base).toUpperCase();
   }
 
-  private addPrefix(isPrefix: boolean, str: string) {
+  private addPrefix(isPrefix: boolean, str: string): string {
     if (!isPrefix) {
       return str;
     }

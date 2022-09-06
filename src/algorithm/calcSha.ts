@@ -4,25 +4,26 @@
  * @param type
  * @returns
  */
-function calcSha(contents: string, type: string) {
+function calcSha(contents: string, type: string): number {
   const forge = require("node-forge");
+  let sha: any;
   switch (type) {
     case "SHA-1":
-      var md = forge.md.sha1.create();
+      sha = forge.md.sha1.create();
       break;
     case "SHA-256":
-      var md = forge.md.sha256.create();
+      sha = forge.md.sha256.create();
       break;
     case "SHA-384":
-      var md = forge.md.sha384.create();
+      sha = forge.md.sha384.create();
       break;
     case "SHA-512":
-      var md = forge.md.sha512.create();
+      sha = forge.md.sha512.create();
       break;
   }
-  md.update(contents);
+  sha.update(contents);
 
-  return md.digest().toHex();
+  return sha.digest().toHex();
 }
 
 export default calcSha;

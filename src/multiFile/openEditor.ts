@@ -7,7 +7,7 @@ import * as vscode from "vscode";
  */
 function openEditor(batchFile: string): Promise<any> {
   return new Promise((resolve) => {
-    var batchPath = vscode.Uri.file(batchFile);
+    var batchPath: vscode.Uri = vscode.Uri.file(batchFile);
 
     vscode.workspace.openTextDocument(batchPath).then((doc) => {
       vscode.window.showTextDocument(doc);

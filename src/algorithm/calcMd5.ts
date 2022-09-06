@@ -4,7 +4,7 @@
  * @param type
  * @returns
  */
-function calcMd5(contents: string, type: string) {
+function calcMd5(contents: string, type: string): number {
   const forge = require("node-forge");
   const md = forge.md.md5.create();
   md.update(contents);

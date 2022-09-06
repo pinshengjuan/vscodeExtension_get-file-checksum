@@ -14,7 +14,7 @@ function loopToParseFile(files: string[], type: string): Promise<any> {
     const checksumStr: string[] = [];
     for (fileCount = 0; fileCount < files.length; fileCount++) {
       const contents: string = await readContent(files[fileCount]);
-      let algorithmRet: any | undefined = checkAlgorithm(type);
+      let algorithmRet: any = checkAlgorithm(type);
 
       const checksumNum: number = algorithmRet(contents, type);
       checksumStr.push(StrProcess.overallStr(checksumNum));

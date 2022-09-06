@@ -4,7 +4,7 @@
  * @param type
  * @returns
  */
-function calcChecksum(contents: string, type: string) {
+function calcChecksum(contents: string, type: string): number {
   let i = 0;
   let result: number = 0;
   var u32Buffer = new Uint32Array(1);

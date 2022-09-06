@@ -7,8 +7,8 @@ import calcMd5 from "./algorithm/calcMd5";
  * @param type
  * @returns
  */
-function checkAlgorithm(type: string) {
-  let func: any | undefined;
+function checkAlgorithm(type: string): any {
+  let func: any;
 
   switch (type) {
     case "Checksum-8":
