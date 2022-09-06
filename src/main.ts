@@ -22,7 +22,7 @@ async function main(files: string[], type: string) {
       });
     } else {
       const maxLen: number = StrProcess.strFindMaxLen(files);
-      const content = formatContent(files, checksumStr, maxLen, type);
+      const content: string = formatContent(files, checksumStr, maxLen, type);
       const batchFilePath: string = writeToFile(content);
       openEditor(batchFilePath);
     }
