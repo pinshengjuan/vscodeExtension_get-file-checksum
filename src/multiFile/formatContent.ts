@@ -19,7 +19,8 @@ function formatContent(
   let fillCount: number = 0;
   let blank: string = "";
   let symbol: string = "";
-  const vscConfig = vscode.workspace.getConfiguration("get-file-checksum");
+  const vscConfig: vscode.WorkspaceConfiguration =
+    vscode.workspace.getConfiguration("get-file-checksum");
 
   vscConfig["symbol"] ? (symbol = vscConfig["symbol"]) : (symbol = ": ");
 
