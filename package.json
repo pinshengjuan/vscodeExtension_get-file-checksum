@@ -74,6 +74,11 @@
           "type": "boolean",
           "default": true,
           "description": "Set to show a notification about file checksum copied."
+        },
+        "get-file-checksum.symbol": {
+          "type": "string",
+          "default": null,
+          "description": "The symbol between filenames and checksums for multiple files results shown in the editor.\nDefault is \": \""
         }
       }
     },

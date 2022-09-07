@@ -1,3 +1,4 @@
+import * as vscode from "vscode";
 import * as path from "path";
 
 /**
@@ -17,6 +18,10 @@ function formatContent(
   let fileCount: number = 0;
   let fillCount: number = 0;
   let blank: string = "";
+  let symbol: string = "";
+  const vscConfig = vscode.workspace.getConfiguration("get-file-checksum");
+
+  vscConfig["symbol"] ? (symbol = vscConfig["symbol"]) : (symbol = ": ");
 
   for (fileCount = 0; fileCount < files.length; fileCount++) {
     const fileName: string = path.basename(files[fileCount]);
@@ -25,7 +30,7 @@ function formatContent(
     for (fillCount = 0; fillCount < fill; fillCount++) {
       blank += " ";
     }
-    content += fileName + blank + "  -->  " + checksum[fileCount] + "\n";
+    content += fileName + blank + symbol + checksum[fileCount] + "\n";
   }
   return content;
 }
