@@ -4,6 +4,11 @@ All notable changes to the "get-file-checksum" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.3.2]
+
+- Change repository
+- Add License
+
 ## [1.3.1]
 
 - Add filename on popup information for single file.
